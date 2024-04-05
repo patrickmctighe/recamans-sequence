@@ -7,6 +7,8 @@ let arcs = [];
 
 let biggest = 0;
 
+let osc;
+
 class Arc{
   constructor(start,end, dir){
     this.start = start;
@@ -30,7 +32,15 @@ if (this.dir == 0){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  frameRate(30);
   background(0);
+
+osc  = new p5.Oscillator();
+osc.setType('sine');
+osc.freq(240);
+osc.amp(0.5);
+osc.start();
+
   numbers[index]= true;
 sequence.push(index);
 for (let i = 0; i < 10; i++){
@@ -54,6 +64,9 @@ arcs.push(a);
 
 
   index = next;
+
+  osc.freq(index)
+
   if (index > biggest){
     biggest = index;
   }
