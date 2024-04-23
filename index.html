@@ -10,10 +10,181 @@
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
+    
   </head>
 
   <body>
-    <script src="sketch.js"></script>
+<div class="content">
+  <div class="mods">
+    <button class="open">Open Menu</button>
+    <div class="slidersContainer">
+
+  
+      
+      <div class="slidecontainer">
+        <p class="sliderTitle">Frame Rate</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min=".05"
+          max="60"
+          value="1"
+          class="slider"
+          step="1"
+          id="frameRateSlider"
+        />
+      </div>
+
+      <div class="slidecontainer">
+        <p class="sliderTitle">Shape 1</p>
+        <div class="amount"></div>
+        <select id="shape1" name="shape1">
+          <option value="circle">Circle</option>
+          <option value="rect">Square</option>
+          <option value="triangle">Triangle</option>
+          <option value="ellipse">Ellipse</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="slidecontainer">
+        <p class="sliderTitle">Shape 2</p>
+        <div class="amount"></div>
+        <select id="shape2" name="shape2">
+          <option value="circle">Circle</option>
+          <option value="rect">Square</option>
+          <option value="triangle">Triangle</option>
+          <option value="ellipse">Ellipse</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="slidecontainer">
+        <p class="sliderTitle">Shape 3</p>
+        <div class="amount"></div>
+        <select id="shape3" name="shape3">
+          <option value="circle">Circle</option>
+          <option value="rect">Square</option>
+          <option value="triangle">Triangle</option>
+          <option value="ellipse">Ellipse</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="slidecontainer">
+        <p class="sliderTitle">Shape 4</p>
+        <div class="amount"></div>
+        <select id="shape4" name="shape4">
+          <option value="circle">Circle</option>
+          <option value="rect">Square</option>
+          <option value="triangle">Triangle</option>
+          <option value="ellipse">Ellipse</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+   
+      
+      
+      <div class="slidecontainer">
+        <p class="sliderTitle">Zoom</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="3"
+          class="slider"
+          step="0.1"
+          id="zoomSlider"
+        />
+      </div>
+    
+      <div class="slidecontainer">
+        <p class="sliderTitle">Opacity 1</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="100"
+          step="1"
+          class="slider"
+          id="opacity1Slider"
+        />
+      </div>
+    
+      <div class="slidecontainer">
+        <p class="sliderTitle">Opacity 2</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="100"
+          step="1"
+          class="slider"
+          id="opacity2Slider"
+        />
+      </div>
+    
+      <div class="slidecontainer">
+        <p class="sliderTitle">Opacity 3</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="100"
+          step="1"
+          class="slider"
+          id="opacity3Slider"
+        />
+      </div>
+    
+ 
+      <div class="slidecontainer">
+        <p class="sliderTitle">Rotation Speed</p>
+        <div class="amount"></div>
+        <input
+          type="range"
+          min=".0001"
+          max=".01"
+          value=".001"
+          class="slider"
+          step="0.00001"
+          id="rotationSlider"
+        />
+        </div>
+        <div class="slidecontainer">
+          <p class="sliderTitle">Spacing</p>
+          <div class="amount"></div>
+          <input
+            type="range"
+            min="2"
+            max="1000"
+            value="5"
+            step="1"
+            class="slider"
+            id="spacingSlider"
+          />
+        </div>
+        <div class="slidecontainer">
+          <p class="sliderTitle">Stroke Weight</p>
+          <div class="amount"></div>
+          <input type="range" class="slider"id="strokeSlider" min="1" max="10" step="1" value="1">
+     </div>
+  
+
+ <div class="closeReset">
+   <button class="close">Close</button>
+ <button id="resetButton">Reset</button>
+ </div>
+
+      </div>
+   
+    </div>
+  </div>
+  <div class="visual"> <script src="sketch.js"></script></div>
+</div>
+    
+   
     
   </body>
 </html>
